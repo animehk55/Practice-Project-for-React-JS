@@ -3,28 +3,38 @@ import Person from './Person';
 import './App.css';
 
 class App extends Component {
+  state = {
+    persons: [
+      { name: 'animesh', age: 25 },
+      { name: 'ram', age: 225 },
+      { name: 'rahi,m', age: 275 },
+      { name: 'shyam', age: 295 },
+      { name: 'niishant', age: 2586525 },
+      { name: 'abdul', age: 225 },
+    ]
+  }
   render() {
     return (
       <div>
           Hello we are working on props
           <br />
           <div className="box">
-          <Person name = "Animesh" age = "435" />
+          <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
           </div>
           <div className="box">
-          <Person name = "An2222imesh" age = "454" />
+          <Person name = {this.state.persons[1].name} age = {this.state.persons[1].age} />
           </div>
           <div className="box">
-          <Person name = "Animes5623h" age = "465" />
+          <Person name = {this.state.persons[2].name} age = {this.state.persons[2].age} />
           </div>
           <div className="box">
-          <Person name = "Ajhgjhnimesh" age = "457" />
+          <Person name = {this.state.persons[3].name} age = {this.state.persons[3].age} />
           </div>
           <div className="box">
-          <Person name = "Animefafadfssh" age = "405">fadsfdsfadffdsfsdfa</Person>
+          <Person name = {this.state.persons[4].name} age = {this.state.persons[4].age}>fadsfdsfadffdsfsdfa</Person>
           </div>
           <div className="box">
-          <Person name = "Anidfsfdfsfdfdmesh" age = "485" />
+          <Person name = {this.state.persons[5].name} age = {this.state.persons[5].age} />
           </div>
       </div>
     );
