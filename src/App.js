@@ -49,12 +49,11 @@ class App extends Component {
       }
 
   render() {
-    return (
-      <div>
-          Hello we are working on props
-          <button onClick={this.togglePersonsHandler}>Button</button>
-          {this.state.showPerson === true ? 
-          <div>
+    let persons = null;
+
+    if (this.state.showPerson ) {
+      persons = (
+        <div>
               <br />
               <div className="box">
               <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
@@ -81,7 +80,14 @@ class App extends Component {
               age = {this.state.persons[5].age}
               click={this.switchNameHandler.bind(this, 'uhiuhifkafjioadsmfsa09jfo')} />
               </div>
-          </div> : null }
+          </div>
+      )
+    }
+    return (
+      <div>
+          Hello we are working on props
+          <button onClick={this.togglePersonsHandler}>Button</button>
+          {persons}
       </div>
     );
   }
