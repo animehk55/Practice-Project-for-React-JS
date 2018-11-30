@@ -42,38 +42,46 @@ class App extends Component {
           }
         )
       }
+      togglePersonsHandler = () =>  {
+        console.log('Was clicked ');
+          const doesShow = this.state.showPerson;
+          this.setState({showPerson: !doesShow});
+      }
 
   render() {
     return (
       <div>
           Hello we are working on props
-          <button onClick={this.switchNameHandler.bind(this, 'Maxfdasffdsnjkm')}>Button</button>
-          <br />
-          <div className="box">
-          <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
-          </div>
-          <div className="box">
-          <Person name = {this.state.persons[1].name} age = {this.state.persons[1].age} />
-          </div>
-          <div className="box">
-          <Person changed={this.nameChangedHandler} name = {this.state.persons[2].name} age = {this.state.persons[2].age} />
-          </div>
-          <div className="box">
-          <Person 
-          name = {this.state.persons[3].name} 
-          age = {this.state.persons[3].age}
-          changed={this.nameChangedHandler}
-           />
-          </div>
-          <div className="box">
-          <Person name = {this.state.persons[4].name} age = {this.state.persons[4].age}>fadsfdsfadffdsfsdfa</Person>
-          </div>
-          <div className="box">
-          <Person 
-          name = {this.state.persons[5].name} 
-          age = {this.state.persons[5].age}
-          click={this.switchNameHandler.bind(this, 'uhiuhifkafjioadsmfsa09jfo')} />
-          </div>
+          <button onClick={this.togglePersonsHandler}>Button</button>
+          {this.state.showPerson === true ? 
+          <div>
+              <br />
+              <div className="box">
+              <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
+              </div>
+              <div className="box">
+              <Person name = {this.state.persons[1].name} age = {this.state.persons[1].age} />
+              </div>
+              <div className="box">
+              <Person changed={this.nameChangedHandler} name = {this.state.persons[2].name} age = {this.state.persons[2].age} />
+              </div>
+              <div className="box">
+              <Person 
+              name = {this.state.persons[3].name} 
+              age = {this.state.persons[3].age}
+              changed={this.nameChangedHandler}
+              />
+              </div>
+              <div className="box">
+              <Person name = {this.state.persons[4].name} age = {this.state.persons[4].age}>fadsfdsfadffdsfsdfa</Person>
+              </div>
+              <div className="box">
+              <Person 
+              name = {this.state.persons[5].name} 
+              age = {this.state.persons[5].age}
+              click={this.switchNameHandler.bind(this, 'uhiuhifkafjioadsmfsa09jfo')} />
+              </div>
+          </div> : null }
       </div>
     );
   }
