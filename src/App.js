@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Person from './Person';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+          Hello we are working on props
+          <br />
+          <div className="box">
+          <Person name = "Animesh" age = "435" />
+          </div>
+          <div className="box">
+          <Person name = "An2222imesh" age = "454" />
+          </div>
+          <div className="box">
+          <Person name = "Animes5623h" age = "465" />
+          </div>
+          <div className="box">
+          <Person name = "Ajhgjhnimesh" age = "457" />
+          </div>
+          <div className="box">
+          <Person name = "Animefafadfssh" age = "405">fadsfdsfadffdsfsdfa</Person>
+          </div>
+          <div className="box">
+          <Person name = "Anidfsfdfsfdfdmesh" age = "485" />
+          </div>
       </div>
     );
   }
