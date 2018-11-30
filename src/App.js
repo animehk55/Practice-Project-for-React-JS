@@ -14,15 +14,26 @@ class App extends Component {
     ]
   }
 
-    switchNameHandler = () => {
-      console.log('Was clicked ');
+  switchNameHandler = () => {
+    // console.log('Was clicked ');
+    this.setState( {
+        persons: [
+          { name: 'this.setState-animesh-this.setState', age: 25 },
+          { name: '.setState-animesh-this.s----ram---.setState-animesh-this.s', age: 225 },
+          { name: 'rahi,m', age: 275 },
+          { name: 'shyam', age: 295 },
+          { name: 'niishant', age: 2586525 },
+          { name: 'abrtfyhnj5drftyuindul', age: 225 },
+        ]
+      }
+)
     }
 
   render() {
     return (
       <div>
           Hello we are working on props
-          <button onClick={this.switchNameHandler}>Button</button>
+          <button onClick={this.switchNameHandler }>Button</button>
           <br />
           <div className="box">
           <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
@@ -40,7 +51,10 @@ class App extends Component {
           <Person name = {this.state.persons[4].name} age = {this.state.persons[4].age}>fadsfdsfadffdsfsdfa</Person>
           </div>
           <div className="box">
-          <Person name = {this.state.persons[5].name} age = {this.state.persons[5].age} />
+          <Person 
+          name = {this.state.persons[5].name} 
+          age = {this.state.persons[5].age}
+          click={this.switchNameHandler} />
           </div>
       </div>
     );
